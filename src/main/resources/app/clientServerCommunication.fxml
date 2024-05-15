@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Communication">
+   <children>
+      <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="39.0" prefHeight="655.0" prefWidth="442.0">
+        <content>
+          <AnchorPane fx:id="paneServerMessage" minHeight="0.0" minWidth="0.0" prefHeight="676.0" prefWidth="442.0">
+               <children>
+                  <StackPane layoutX="15.0" layoutY="32.0" prefHeight="35.0" prefWidth="402.0" style="-fx-background-color: #2b2d42;">
+                     <children>
+                        <Label style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="Server" />
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ScrollPane hbarPolicy="NEVER" layoutX="456.0" layoutY="39.0" prefHeight="655.0" prefWidth="426.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="660.0" prefWidth="424.0">
+               <children>
+                  <TextField fx:id="txtInputText" layoutX="12.0" layoutY="599.0" onKeyPressed="#handleInputEnter" prefHeight="46.0" prefWidth="344.0" style="-fx-background-radius: 10px;" />
+                  <Button layoutX="363.0" layoutY="599.0" mnemonicParsing="false" onAction="#handleInputText" onKeyPressed="#handleInputEnter" prefHeight="46.0" prefWidth="46.0" style="-fx-background-radius: 10px; -fx-background-color: #2b2d42; -fx-text-fill: white;" text="➡">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <StackPane layoutX="6.0" layoutY="45.0" prefHeight="35.0" prefWidth="402.0" style="-fx-background-color: #2b2d42;">
+                     <children>
+                        <Label style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="Client" />
+                     </children>
+                  </StackPane>
+                  <Label layoutX="9.0" layoutY="94.0" text="CLIENT AND SERVER ARE CONNECTED ON PORT">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txtPort" alignment="CENTER" layoutX="190.0" layoutY="136.0" prefHeight="18.0" prefWidth="49.0" text="PORT">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button fx:id="btnCloseConnection" layoutX="727.0" mnemonicParsing="false" onAction="#handleCloseConnection" prefHeight="30.0" prefWidth="154.0" style="-fx-background-color: #ef233c; -fx-background-radius: 0; -fx-text-fill: white; -fx-font-weight: bold;" text="Connect Other Port" />
+   </children>
+</AnchorPane>
