@@ -26,6 +26,25 @@ public class EncryptDecrypt {
         byte[] paddedPlainText = padString(plainText);
         return cipher.doFinal(paddedPlainText);
     }
+    public static String decrypt(byte[] cipherText) throws Exception {
+    try {
+        Cipher cipher = Cipher.getInstance("DES/CBC/PKCS5Padding");
+        KeySpec keySpec = new DESKeySpec(KEY.getBytes());
+        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES");
+        SecretKey secretKey = keyFactory.generateSecret(keySpec);
+        IvParameterSpec iv = new IvParameterSpec(IV.getBytes());
+        cipher.init(Cipher.DECRYPT_MODE, secretKey, iv);
+        byte[] decryptedBytes = cipher.doFinal(cipherText);
+
+        int paddingLength = decryptedBytes[decryptedBytes.length - 1];
+        byte[] unpaddedBytes = Arrays.copyOfRange(decryptedBytes, 0, decryptedBytes.length - paddingLength);
+
+        return new String(unpaddedBytes);
+    }catch (Exception e){
+        e.printStackTrace();
+        return null;
+    }
+}
 
     public  static byte[] padString(String text) {
         int padding = 8 - (text.length() % 8);
