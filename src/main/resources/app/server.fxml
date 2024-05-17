@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Server">
+   <children>
+      <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="39.0" prefHeight="655.0" prefWidth="877.0">
+         <content>
+            <AnchorPane fx:id="paneServerMessage" minHeight="0.0" minWidth="0.0" prefHeight="654.0" prefWidth="874.0">
+               <children>
+                  <StackPane layoutX="15.0" layoutY="32.0" prefHeight="35.0" prefWidth="836.0" style="-fx-background-color: #2b2d42;">
+                     <children>
+                        <Label style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="Server" />
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Button fx:id="btnCloseConnection" layoutX="727.0" mnemonicParsing="false" onAction="#handleCloseConnection" prefHeight="30.0" prefWidth="154.0" style="-fx-background-color: #ef233c; -fx-background-radius: 0; -fx-text-fill: white; -fx-font-weight: bold;" text="Connect Other Port" />
+   </children>
+</AnchorPane>
