@@ -12,6 +12,10 @@ import java.io.IOException;
 public class Navigator {
     public final static String communciaton = "clientServerCommunication.fxml";
     public final static String connect = "connectPage.fxml";
+    public final static String client = "client.fxml";
+    public final static String server = "server.fxml";
+    public final static String connectServer = "connectServer.fxml";
+
 
     public static void navigate(Event event, String form){
         Node eventNode = (Node) event.getSource();

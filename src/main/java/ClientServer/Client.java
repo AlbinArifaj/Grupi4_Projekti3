@@ -50,7 +50,12 @@ public class Client extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+
         Navigator.navigate(stage,Navigator.connect);
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }
 

@@ -7,5 +7,6 @@ module com.example.demo {
 //    exports com.example.demo;
 
     exports app;
+    exports ClientServer;
     opens controller to javafx.fxml;
 }

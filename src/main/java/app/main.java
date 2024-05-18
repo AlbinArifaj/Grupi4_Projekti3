@@ -10,6 +10,6 @@ public class main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Navigator.navigate(stage,Navigator.connect);
+        Navigator.navigate(stage,Navigator.connectServer);
     }
 }
