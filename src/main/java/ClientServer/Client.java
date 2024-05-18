@@ -52,6 +52,7 @@ public class Client extends Application {
     public void start(Stage stage) throws Exception {
 
         Navigator.navigate(stage,Navigator.connect);
+        stage.setTitle("CLIENT");
     }
 
     public static void main(String[] args) {

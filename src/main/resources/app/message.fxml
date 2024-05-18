@@ -5,21 +5,21 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="446.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Message">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Message">
    <children>
       <Label fx:id="txtClientTalking" layoutX="14.0" layoutY="5.0" text="Client Says">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <Pane layoutX="14.0" layoutY="20.0" prefHeight="53.0" prefWidth="426.0" style="-fx-background-color: #2b2d42; -fx-background-radius: 10px;">
+      <Pane layoutX="14.0" layoutY="20.0" prefHeight="54.0" prefWidth="836.0" style="-fx-background-color: #2b2d42; -fx-background-radius: 10px;">
          <children>
-            <Label fx:id="txtClientMessage" ellipsisString="" layoutX="21.0" layoutY="8.0" prefHeight="17.0" prefWidth="394.0" style="-fx-text-fill: white; -fx-border-radius: 10px;" text="Label" wrapText="true">
+            <Label fx:id="txtClientMessage" ellipsisString="" layoutX="21.0" layoutY="8.0" prefHeight="17.0" prefWidth="810.0" style="-fx-text-fill: white; -fx-border-radius: 10px;" text="Label" wrapText="true">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="txtSetTime" ellipsisString="" layoutX="318.0" layoutY="31.0" prefHeight="17.0" prefWidth="94.0" style="-fx-text-fill: white; -fx-opacity: 0.5;" text="Label">
+            <Label fx:id="txtSetTime" ellipsisString="" layoutX="728.0" layoutY="32.0" prefHeight="17.0" prefWidth="94.0" style="-fx-text-fill: white; -fx-opacity: 0.5;" text="Label">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
