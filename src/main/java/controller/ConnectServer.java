@@ -15,7 +15,6 @@ public class ConnectServer {
 
 
     public void handleUpdate(ActionEvent event) throws Exception {
-        System.out.println("2" +ConnectClient.username);
         if (AvailablePort.available(Integer.parseInt(txtPort.getText()))) {
             PortConnection.setPortNumber(Integer.parseInt(txtPort.getText()));
             Navigator.navigate(event, Navigator.server);

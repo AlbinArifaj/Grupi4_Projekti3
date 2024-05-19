@@ -8,6 +8,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 import java.security.Provider;
 
@@ -22,12 +24,10 @@ public class ConnectClient {
 
     public void handleUpdate(ActionEvent event) throws Exception {
         username =txtName.getText();
-        System.out.println("1" + username);
         PortConnection.setPortNumber(Integer.parseInt(txtPort.getText()));
         ClientServer.Client.connectClient(Integer.parseInt(txtPort.getText()));
         Navigator.navigate(event, Navigator.client);
     }
-
 
 
 }

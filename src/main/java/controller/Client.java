@@ -38,7 +38,6 @@ public class Client implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("3" + ConnectClient.username);
         txtPort.setText(String.valueOf(PortConnection.getPortNumber()));
     }
 

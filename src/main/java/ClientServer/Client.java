@@ -24,7 +24,6 @@ public class Client extends Application {
         String senMsg = message;
         byte[] messageEncrypted = EncryptDecrypt.encrypt(senMsg);
         String encryptedMessageBase64 = Base64.getEncoder().encodeToString(messageEncrypted);
-        System.out.println(encryptedMessageBase64);
         out.println(ConnectClient.username);
         out.println(new String(encryptedMessageBase64));
 

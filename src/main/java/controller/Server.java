@@ -64,7 +64,6 @@ public static void addMessage(String username, String message) {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("4"+ConnectClient.username);
         new Thread(() -> {
             try {
                 ClientServer.Server.startServer(PortConnection.getPortNumber());
@@ -87,7 +86,7 @@ public static void addMessage(String username, String message) {
 
 
     public void handleCloseConnection(ActionEvent event) throws IOException {
-        Navigator.navigate(event, Navigator.connect);
+        Navigator.navigate(event, Navigator.connectServer);
     }
 
 }
