@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class EncryptDecrypt {
 
     private static String KEY = "password";
-    private static final String IV = "12345678"; // 8 bytes IV
+    private static final String IV = "12345678"; 
 
 
 
