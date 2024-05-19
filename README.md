@@ -2,7 +2,7 @@
 University Of Prishtina - Faculty of Electrical and Computer Engineering/Department of Computer and Software Engineering
 
 ## Supervisor
-*Second Project in Data Security Course supervised by Phd.Cand Mergim Hoti*
+*Third Project in Data Security Course supervised by Phd.Cand Mergim Hoti*
 
 # Description
 In this project, we had to make a TCP communication between Client and Server, but the data could be sent only one way, so the client could send data to the server, but the server could not send data to the client.
