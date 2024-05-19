@@ -38,7 +38,7 @@ Socket clientSocket = new Socket("localhost", portNumber);
 ```
 Here we specify the port number but also specify the host in which the server is running so the user can connect. If they were in different places, then we need to specify the IP Address in which the server is running.
 
-## >>>>>>>>>>>>>>>>> DES-CBC Encryption <<<<<<<<<<<<<<<<<<
+## ----------------- DES-CBC Encryption ---------------------
 All the data that is being sent from the CLIENT to the SERVER need to be encrypted. The algorithm for encryption and decryption that we used is DES-CBC.
 
 **Initialization Vector (IV):** A random IV, the size of a block (64 bits for DES), is generated to prevent identical plaintext from producing identical ciphertext.
@@ -64,3 +64,48 @@ All the data that is being sent from the CLIENT to the SERVER need to be encrypt
 **Chaining:** The plaintext block becomes input for the next block's XOR operation.
 
 **Padding Removal:** If padding was added, it's removed to recover the original plaintext.
+
+## ------------------- Port Availability -----------------------
+For port availability, we first checked if the port is in the range of the TCP/UDP; the range is from 1 to 65535.
+
+After the first check, we then declare two different kinds of Sockets. These two Sockets are used to check if the port on my computer is in use.
+
+ServerSocket is used to check for TCP ports.
+
+DatagramSocket is used to check for UDP ports.
+
+```java
+ss = new ServerSocket(port);
+ss.setReuseAddress(true);
+ds = new DatagramSocket(port);
+ds.setReuseAddress(true);
+```
+If everything checks out, then it allows the server to start on the specified port.
+
+## ----- Allowing More Than One User to Connect ------
+TCP communications are single-threaded. What does this mean?
+
+This means that when a server is started, only one user can connect, so the server allows only one user to connect and communicate with that user.
+
+So what we did to bypass this was to make it multi-threaded. For each user, we create a new Thread to handle that user. This is implemented using the Java Thread API.
+
+```java
+Thread thread = new Thread();
+```
+So each time a new user is connected to the Server, a new Thread is created to handle that user, and all of these run concurrently.
+
+This thread continues to handle communication until the server is closed.
+
+## ----- Add UI to Display Messages Being Sent -------
+The application that we developed has a GUI. The GUI is implemented using JavaFX, which is a Java Library. All the GUI components are thanks to this class.
+
+Explaining this library is a pretty big task. If you want to learn more about it, go to this [Link](https://docs.oracle.com/javafx/2/overview/jfxpub-overview.htm).
+
+## Extra
+The application is made using the MVC architecture, so everything is split: in the controller, we handle all the user input; in the FXML, we have all the design of the application; and in the other files, we handle the logic of the application.
+
+## Contributors
+1) Albin Arifaj
+2) Albion Ahmeti
+3) Albjon Tahirsylaj
+4) Alfred Palokaj
